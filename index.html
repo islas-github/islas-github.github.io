@@ -185,7 +185,6 @@
     </div>
 
     <script>
-        // Toggle region field visibility based on destination
         function toggleRegionField() {
             const destination = document.getElementById('destination').value;
             const regionGroup = document.getElementById('region-group');
@@ -200,9 +199,8 @@
             }
         }
 
-        // Handle form submission with popup
         function submitForm(event) {
-            event.preventDefault(); // Prevent default submission (e.g., page reload)
+            event.preventDefault();
             const form = document.getElementById('travelForm');
             if (form.checkValidity()) {
                 const phone = document.getElementById('phone').value;
@@ -213,13 +211,11 @@
             return false;
         }
 
-        // Show popup and overlay
         function showPopup() {
             document.getElementById('overlay').style.display = 'block';
             document.getElementById('popup').style.display = 'block';
         }
 
-        // Close popup, hide overlay, and reset form
         function closePopup() {
             document.getElementById('overlay').style.display = 'none';
             document.getElementById('popup').style.display = 'none';
